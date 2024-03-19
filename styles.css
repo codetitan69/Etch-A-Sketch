@@ -1,0 +1,130 @@
+/* || Reset */
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || Custom Properties */
+
+:root{
+    --Sketch-Background-Color: white;
+    --Sketch-Resolution: 128;
+
+    --Pen-Color: hsl(0, 0%, 0%);
+}
+
+/* || Body */
+
+body{
+    height: 100vh;
+}
+
+/* || Title */
+
+.Title{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+/* || Main Area styles */
+
+.sketchAndControls{
+    margin: 0px auto;
+    width: 90vh;
+    height: 90vh;
+
+    display: flex;
+    gap: 8px;
+}
+
+/* || Resoultions */
+
+.resolutionOptions{
+    display: flex;
+    flex-direction: column;
+}
+
+/* || Sketch area styles */
+
+.Sketch-Container{
+    background-color: var(--Sketch-Background-Color);
+
+    width: 80%;
+    height: 80%;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.442);
+    border-radius: 2px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.Sketch-Container div{
+    width: calc(100%/var(--Sketch-Resolution));
+    height: calc(100%/var(--Sketch-Resolution));
+}
+
+/* || Resolution links styling */
+
+.resolutionOptions a{
+    display: block;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    margin-bottom: 8px;
+    background-color: darkgrey;
+    padding: 6px 0px;
+    border-radius: 2px;
+}
+
+.resolutionOptions a:any-link{
+    color: #333;
+}
+
+/* || Grey Scale Mode */
+
+.sketchAndControls .controls .GreyScale{
+    width: 80px;
+    text-align: center;
+    margin-bottom: 8px;
+
+    padding: 6px 0px;
+    font-weight: 900;
+    display: block;
+    background-color: rgba(169,169,169,1);
+    border-radius: 2px;
+
+    cursor: pointer;
+}
+
+.sketchAndControls .controls .Clear{
+    width: 80px;
+    text-align: center;
+
+    padding: 6px 0px;
+    font-weight: 900;
+    display: block;
+    background-color: rgba(169,169,169,1);
+    border-radius: 2px;
+    margin-bottom: 8px;
+
+    cursor: pointer;
+}
+
+.controls .Random{
+    width: 80px;
+    text-align: center;
+
+    padding: 6px 0px;
+    font-weight: 900;
+    display: block;
+    background-color: rgba(169,169,169,1);
+    border-radius: 2px;
+
+    cursor: pointer;
+}
